@@ -1,10 +1,9 @@
-
 local M = {
 	Color = require('colorbuddy.init').Color,
-	c = 		require('colorbuddy.init').colors,
+	c = require('colorbuddy.init').colors,
 	Group = require('colorbuddy.init').Group,
-	g = 		require('colorbuddy.init').groups,
-	s = 		require('colorbuddy.init').styles
+	g = require('colorbuddy.init').groups,
+	s = require('colorbuddy.init').styles
 }
 
 function M.set_colors()
@@ -13,10 +12,10 @@ function M.set_colors()
 	vim.g.colors_name = "violetdream"
 
 	local Color = M.Color;
-	local c = M.colors;
+	local c = M.c;
 	local Group = M.Group;
-	local g = M.groups;
-	local s = M.styles;
+	local g = M.g;
+	local s = M.s;
 
 	Color.new("superwhite", "#E0E0E0")
 	Color.new('background', bg)
