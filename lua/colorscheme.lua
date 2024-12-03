@@ -9,7 +9,7 @@ local M = {
 }
 
 function M.set_colors()
-	local bg = "#111116"
+	local bg = "#030104" -- Onyx
 
 	vim.g.colors_name = "violetdream"
 
@@ -19,7 +19,10 @@ function M.set_colors()
 	local g = M.g;
 	local s = M.s;
 
-	Color.new("superwhite", "#E0E0E0")
+
+	-- Use Color.new(<name>, <#rrggbb>) to create new colors
+	-- They can be accessed through colors.<name>
+	Color.new("superwhite", "#F8F9F8")
 	Color.new('background', bg)
 	Color.new('red', '#E46876')
 	Color.new('green', '#25BE6A')
@@ -28,13 +31,15 @@ function M.set_colors()
 	Color.new('lightpink', '#FF91C1')
 	Color.new('violet', '#A45B9B')
 	Color.new('lightviolet', '#BE95FF')
+	Color.new("black", '#030104')
+	Color.new('lavender', '#5F5F87')
 	Color.new('gray', '#999B9D')
 	Color.new('gray1', '#7B7C7E')
 	Color.new('blue', '#52BDFF')
 	Color.new('cyan', '#3DDBD9')
+	Color.new('darkcyan', '#008787')
 	Color.new('BracketHover', '#ffcc00')
 	Color.new('visual', "#444444")
-
 
 	-- Editor
 
@@ -50,13 +55,29 @@ function M.set_colors()
 	Group.new("PMenuSel", c.black, c.purple:light())
 	Group.new("PMenuSbar", nil, c.gray2)
 	Group.new("PMenuThumb", nil, c.black)
-	Group.new("Directory", c.violet)
+	Group.new("Directory", c.superwhite)
 	Group.new("Visual", nil, c.visual)
 	Group.new("VisualLineMode", g.Visual, g.Visual)
 	Group.new("VisualMode", g.Visual, g.Visual)
 	-- Group.new("Conceal", g.Normal.bg, c.gray2:light(), s.italic)
 	-- Group.new("qfFileName", c.purple, nil, s.bold)
 	-- Define highlights in terms of `colors` and `groups`
+	Group.new("Special", c.orange)
+	-- Telescope
+	Group.new("TelescopeMatching", c.pink)
+	Group.new("TelescopeBorder", c.lavender)
+	Group.new("TelescopePromptBorder", c.darkcyan)
+	Group.new("TelescopeTitle", g.Normal)
+	Group.new("TelescopePromptPrefix", c.lavender)
+	Group.new("TelescopeSelection", g.CursorLine)
+	Group.new("TelescopeSelectionCaret", c.lavender)
+
+	-- NeoTree
+	Group.new("NeoTreeFileIcon", c.darkcyan)
+	Group.new("NeoTreeFileName", c.superwhite)
+	Group.new("NeoTreeDirectoryIcon", c.lavender)
+	Group.new("FloatBorder", c.darkcyan)
+
 
 	-- Code
 	Group.new('@function', c.blue, nil)
@@ -113,7 +134,7 @@ function M.set_colors()
 	-- Define highlights in relative terms of other colors
 	Group.new('Error', c.red:light(), nil, s.bold)
 
-	Color.new('GitAddColor', '#00FF00')    -- Green for added lines
+	Color.new('GitAddColor', '#00FF00')   -- Green for added lines
 	Color.new('GitChangeColor', '#FFA500') -- Orange for modified lines
 	Color.new('GitRemoveColor', '#FF0000') -- Red for removed lines
 	Color.new('GitSignsBgColor', '#2E3B61') -- Background color for GitSigns
