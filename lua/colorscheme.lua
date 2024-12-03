@@ -69,7 +69,7 @@ function M.set_colors()
 	Group.new("TelescopePromptBorder", c.darkcyan)
 	Group.new("TelescopeTitle", g.Normal)
 	Group.new("TelescopePromptPrefix", c.lavender)
-	Group.new("TelescopeSelection", g.CursorLine)
+	-- Group.new("TelescopeSelection", g.CursorLine)
 	Group.new("TelescopeSelectionCaret", c.lavender)
 
 	-- NeoTree
