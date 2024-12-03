@@ -1,9 +1,12 @@
+local colorbuddy = require('colorbuddy')
+
+
 local M = {
-	Color = require('colorbuddy.init').Color,
-	c = require('colorbuddy.init').colors,
-	Group = require('colorbuddy.init').Group,
-	g = require('colorbuddy.init').groups,
-	s = require('colorbuddy.init').styles
+	Color = colorbuddy.Color,
+	c = colorbuddy.colors,
+	Group = colorbuddy.Group,
+	g = colorbuddy.groups,
+	s = colorbuddy.styles
 }
 
 function M.set_colors()
