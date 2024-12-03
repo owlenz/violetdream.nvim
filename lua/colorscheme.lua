@@ -1,25 +1,22 @@
-local colorbuddy = require('colorbuddy')
-
--- Set up your custom colorscheme if you want
 
 local M = {
-	Color = colorbuddy.Color,
-	c = colorbuddy.colors,
-	Group = colorbuddy.Group,
-	g = colorbuddy.groups,
-	s = colorbuddy.styles
+	Color = require('colorbuddy.init').Color,
+	c = 		require('colorbuddy.init').colors,
+	Group = require('colorbuddy.init').Group,
+	g = 		require('colorbuddy.init').groups,
+	s = 		require('colorbuddy.init').styles
 }
 
 function M.set_colors()
 	local bg = "#111116"
 
-	colorbuddy.colorscheme("violetdream")
 	vim.g.colors_name = "violetdream"
+
 	local Color = M.Color;
+	local c = M.colors;
 	local Group = M.Group;
 	local g = M.groups;
 	local s = M.styles;
-	local c = M.colors;
 
 	Color.new("superwhite", "#E0E0E0")
 	Color.new('background', bg)
