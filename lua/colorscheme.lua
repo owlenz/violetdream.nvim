@@ -1,6 +1,5 @@
 local colorbuddy = require('colorbuddy')
 
-
 local M = {
 	Color = colorbuddy.Color,
 	c = colorbuddy.colors,
@@ -79,7 +78,7 @@ function M.set_colors()
 	Group.new("@variable", c.white, nil)
 
 	Group.new("@number", c.cyan)
-	Group.link("Float", g.Number)
+	Group.new("Float", c.cyan)
 	Group.new('@string.escape', c.cyan)
 	Group.new("Character", c.green)
 	Group.new("Comment", c.gray3, nil, s.italic)
@@ -121,6 +120,8 @@ function M.set_colors()
 end
 
 function M.setup(opts)
+	opts = opts or {}
+
 	return M
 end
 
