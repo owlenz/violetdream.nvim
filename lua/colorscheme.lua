@@ -40,6 +40,7 @@ function M.set_colors()
 	Color.new('darkcyan', '#008787')
 	Color.new('BracketHover', '#ffcc00')
 	Color.new('visual', "#444444")
+	Color.new('lightgreen','#AFFFAF')
 
 	-- Editor
 
@@ -92,6 +93,7 @@ function M.set_colors()
 	Group.new("@keyword.return", c.violet, nil, s.italic)
 	Group.new("@keyword.import", c.red, nil)
 
+	Group.new("Constant", c.red)
 	Group.new("@constant", c.red)
 	Group.new("@constant.builtin", c.red)
 	Group.new("@constant.macro", c.red)
@@ -101,6 +103,7 @@ function M.set_colors()
 	Group.new("@number", c.cyan)
 	Group.new("Float", c.cyan)
 	Group.new('@string.escape', c.cyan)
+	Group.new('@string', c.cyan)
 	Group.new("Character", c.green)
 	Group.new("Comment", c.gray3, nil, s.italic)
 
