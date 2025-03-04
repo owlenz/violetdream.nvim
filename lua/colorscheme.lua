@@ -67,7 +67,7 @@ function M.set_colors()
 	-- Telescope
 	Group.new("TelescopeMatching", c.pink)
 	Group.new("TelescopeBorder", c.lavender)
-	Group.new("TelescopePromptBorder", c.darkcyan)
+	Group.new("TelescopePromptBorder", c.lavender)
 	Group.new("TelescopeTitle", g.Normal)
 	Group.new("TelescopePromptPrefix", c.lavender)
 	-- Group.new("TelescopeSelection", g.CursorLine)
@@ -77,7 +77,7 @@ function M.set_colors()
 	Group.new("NeoTreeFileIcon", c.darkcyan)
 	Group.new("NeoTreeFileName", c.superwhite)
 	Group.new("NeoTreeDirectoryIcon", c.lavender)
-	Group.new("FloatBorder", c.darkcyan)
+	Group.new("FloatBorder", c.lavender)
 
 
 	-- Code
