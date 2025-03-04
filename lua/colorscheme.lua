@@ -103,7 +103,7 @@ function M.set_colors()
 	Group.new("@number", c.cyan)
 	Group.new("Float", c.cyan)
 	Group.new('@string.escape', c.cyan)
-	Group.new('@string', c.cyan)
+	Group.new('@string', c.green)
 	Group.new("Character", c.green)
 	Group.new("Comment", c.gray3, nil, s.italic)
 
